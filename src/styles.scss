@@ -1,0 +1,143 @@
+/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@100&display=swap");
+$text-color: var(--Primary-Black, #000);
+$text-outline-color: #000;
+$text-outline-background: #fff;
+* {
+  margin: 0;
+  padding: 0;
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  .header-main {
+    font-family: Sora;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+    display: flex;
+    padding: 24px 32px;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+    .header-links {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 32px;
+      cursor: pointer;
+    }
+    .logo-btn {
+      display: flex;
+      padding: 16px 20px;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      border-radius: 4px;
+      background: var(--Primary-Black, #000);
+      font-family: Sora;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 24px;
+      color: #f9f8f8;
+      cursor: pointer;
+    }
+    .logo-btn:hover {
+      border-radius: 4px;
+      background: var(--Primary-Neutral, #404040);
+    }
+    .logo-btn:active{
+      background: #fff;
+      color: #000;
+      border: 2px solid #000;
+      svg {
+        path {
+            stroke: #000;
+        }
+    }
+    }
+  }
+  .page-main {
+    display: flex;
+    padding: 60px 80px;
+    align-items: flex-start;
+    justify-content: flex-end;
+    .image-main {
+      img {
+        width: 700px;
+        height: 450px;
+      }
+    }
+    .text-main {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 32px;
+      .row {
+        display: flex;
+        gap: 18px;
+        font-family: Sora;
+        font-size: 48px;
+        font-style: normal;
+
+        .text-bold {
+          color: $text-color;
+          font-weight: 800;
+          line-height: 56px;
+          letter-spacing: -0.96px;
+        }
+
+        .text-normal {
+          font-weight: 400;
+          line-height: 56px;
+          letter-spacing: -0.96px;
+        }
+
+        .text-outline {
+          -webkit-text-stroke-width: 3px;
+          -webkit-text-stroke-color: $text-outline-color;
+          color: $text-outline-background;
+          font-weight: 800;
+          line-height: 56px;
+          letter-spacing: -0.96px;
+        }
+      }
+      .about {
+        color: var(--Zinc-500, #71717a);
+
+        p {
+          font-family: Sora;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 24px; /* 150% */
+          letter-spacing: 0.32px;
+        }
+      }
+      .media-icons {
+        display: flex;
+        gap: 32px;
+        .icon{
+          display: flex;
+          padding: 16px;
+          justify-content: center;
+          align-items: center;
+          gap: 8px;
+          border: 2px solid #000;
+          border-radius: 4px;
+          cursor: pointer;
+        }
+        .icon:hover{
+          background: #000;
+          svg {
+            path {
+                fill: #fff;
+            }
+        }
+        }
+      }
+    }
+  }
+}
