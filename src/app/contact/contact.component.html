@@ -1,23 +1,26 @@
 <section>
   <div class="contact-main">
     <div class="form-wrap">
-      <div class="form-group">
-        <div class="mb-3">
-          <input type="text" class="form-control" placeholder="Your Name">
+      <form [formGroup]="contactForm">
+        <div class="form-group">
+          <div class="mb-3">
+            <input type="text" formControlName="name" class="form-control" placeholder="Your Name">
+          </div>
+          <div class="mb-3">
+            <input type="email" formControlName="email" class="form-control" placeholder="Email">
+          </div>
+          <div class="mb-3">
+            <input type="text" formControlName="website" class="form-control" placeholder="Your Website (if exist)">
+          </div>
+          <div class="mb-3">
+            <textarea rows="4" formControlName="message" cols="50" class="form-control" placeholder="How can i help"></textarea>
+          </div>
+          <div class="mb-3">
+            <button class="btn" (click)="submit()">Send</button>
+          </div>
         </div>
-        <div class="mb-3">
-          <input type="email" class="form-control" placeholder="Email">
-        </div>
-        <div class="mb-3">
-          <input type="text" class="form-control" placeholder="Your Website (if exist)">
-        </div>
-        <div class="mb-3">
-          <textarea rows="4" cols="50" class="form-control" placeholder="How can i help"></textarea>
-        </div>
-        <div class="mb-3">
-          <button class="btn">Send</button>
-        </div>
-      </div>
+      </form>
+      
     </div>
     <div class="contact-head">
       <div class="text-wrap">
