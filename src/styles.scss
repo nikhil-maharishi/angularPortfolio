@@ -371,7 +371,7 @@ body {
   }
   .about-main {
     display: flex;
-    width: 80%;
+    width: 100%;
     padding: 0px 32px;
     gap: 42px;
     justify-content: space-between;
@@ -401,7 +401,7 @@ body {
   }
   .contact-main {
     display: flex;
-    width: 80%;
+    width: 100%;
     padding: 0px 32px;
     justify-content: space-between;
     align-items: center;
@@ -515,6 +515,19 @@ body {
     -webkit-animation-timing-function: ease-out;
     animation-timing-function: ease-out;
   }
+}
+
+@media only screen and (max-width: 1440px) {
+  .page-main{
+    .text-wrap {
+      display: flex;
+      gap: 18px;
+      font-family: Sora;
+      font-size: 32px;
+      font-style: normal;
+    }
+  }
+  
 }
 
 @media only screen and (max-width: 576px) {
