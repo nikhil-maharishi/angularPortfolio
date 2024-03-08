@@ -374,7 +374,6 @@ body {
     width: 100%;
     padding: 0px 32px;
     gap: 42px;
-    justify-content: space-between;
     align-items: center;
     flex-shrink: 0;
     .my-img {
@@ -403,7 +402,7 @@ body {
     display: flex;
     width: 100%;
     padding: 0px 32px;
-    justify-content: space-between;
+    gap: 42px;
     align-items: center;
     flex-shrink: 0;
   }
