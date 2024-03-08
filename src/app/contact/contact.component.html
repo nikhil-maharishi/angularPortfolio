@@ -1,22 +1,22 @@
 <section>
   <div class="contact-main">
     <div class="form-wrap">
-      <form [formGroup]="contactForm">
+      <form [formGroup]="contactForm" name="contact" method="POST" netlify>
         <div class="form-group">
           <div class="mb-3">
-            <input type="text" formControlName="name" class="form-control" placeholder="Your Name">
+            <input type="text" formControlName="name" class="form-control" placeholder="Your Name" name="name" >
           </div>
           <div class="mb-3">
-            <input type="email" formControlName="email" class="form-control" placeholder="Email">
+            <input type="email" formControlName="email" class="form-control" placeholder="Email" name="email" >
           </div>
           <div class="mb-3">
-            <input type="text" formControlName="website" class="form-control" placeholder="Your Website (if exist)">
+            <input type="text" formControlName="website" class="form-control" placeholder="Your Website (if exist)" name="website" >
           </div>
           <div class="mb-3">
-            <textarea rows="4" formControlName="message" cols="50" class="form-control" placeholder="How can i help"></textarea>
+            <textarea rows="4" formControlName="message" cols="50" class="form-control" placeholder="How can i help" name="message"></textarea>
           </div>
           <div class="mb-3">
-            <button class="btn" (click)="submit()">Send</button>
+            <button class="btn" (click)="submit()" type="submit">Send</button>
           </div>
         </div>
       </form>
