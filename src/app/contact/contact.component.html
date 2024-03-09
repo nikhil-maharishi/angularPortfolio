@@ -1,9 +1,12 @@
 <section>
   <div class="contact-main">
     <div class="form-wrap">
-      <form [formGroup]="contactForm" name="contact" method="POST" netlify>
+      <form [formGroup]="contactForm" name="contact"  netlify>
         <div class="form-group">
-          <input type="hidden" name="subject" value="maharishinikhil.netlify.app" />
+          <div *ngIf="message" class="alert" [ngClass]="{'alert-success':!isError,'alert-danger':isError}" role="alert">
+            {{message}}
+          </div>
+          <input type="hidden" name="form-name" value="contact" />
           <div class="mb-3">
             <input type="text" formControlName="name" class="form-control" placeholder="Your Name" name="name">
           </div>
