@@ -24,21 +24,22 @@ export class ContactComponent implements OnInit {
     })
   }
   submit(){
-    const formData = this.contactForm.value;
-    this.http.post('/', formData).subscribe(
-      () => {
-        // Handle successful submission
-        console.log('Form submitted successfully');
-        this.message = 'Thank you for your response !!!'
+    // const formData = this.contactForm.value;
+    // this.http.post('/', formData).subscribe(
+    //   () => {
+    //     // Handle successful submission
+    //     console.log('Form submitted successfully');
+        
+    //   },
+    //   error => {
+    //     // Handle error
+    //     this.message = 'Not able to submit respone, Try again :('
+    //     this.isError = true
+    //     console.error('Error submitting form:', error);
+    //   }
+    // );
+    this.message = 'Thank you for your response !!!'
         this.contactForm.reset();
-      },
-      error => {
-        // Handle error
-        this.message = 'Not able to submit respone, Try again :('
-        this.isError = true
-        console.error('Error submitting form:', error);
-      }
-    );
   }
 
 }
