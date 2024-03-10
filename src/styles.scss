@@ -142,6 +142,7 @@ body {
       flex-direction: column;
       align-items: flex-start;
       gap: 32px;
+      animation: slideIn 1s ease-in-out forwards;
       .about {
         color: var(--Zinc-500, #71717a);
 
@@ -304,6 +305,7 @@ body {
     justify-content: center;
     background: var(--Primary-Black, #000);
     color: #fff;
+    animation: slideIn 1s ease-in-out forwards;
     .experience-head {
       .text-bold {
         color: #fff;
@@ -393,6 +395,7 @@ body {
       align-items: flex-start;
       gap: 20px;
       width: 600px;
+      animation: slideIn 1s ease-in-out forwards;
       .about-content {
         color: var(--Zinc-500, #71717a);
       }
@@ -514,6 +517,16 @@ body {
     -webkit-animation-timing-function: ease-out;
     animation-timing-function: ease-out;
   }
+}
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+ to{
+  opacity: 1;
+    transform: translateY(0);
+ }
 }
 
 @media only screen and (max-width: 1440px) {
